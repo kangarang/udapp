@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "beefy index.js:bundle.js --live --open",
-    "build": "browserify index.js > bundle.js"
+    "build": "browserify index.js > bundle.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "",
   "license": "ISC",
@@ -20,10 +22,12 @@
     "obs-store": "^2.4.1",
     "treeify": "^1.0.1",
     "virtual-dom": "^2.1.1",
-    "web3-provider-engine": "^7.8.1"
+    "web3-provider-engine": "^7.8.1",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "beefy": "^2.1.8",
     "browserify": "^14.4.0"
-  }
+  },
+  "snyk": true
 }
